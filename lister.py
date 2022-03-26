@@ -15,9 +15,7 @@ with open(file, "r") as f:
 def read():
     tasks = int(input("-----------------\n1=Print all\n2=Sort value from highest to lowest\n\
 3=Sort value from lowerst to highest\n4=Sort key from highest to lowest\n: "))
-    read_todo(tasks)
 
-def read_todo(tasks):
     match tasks:
         case 1:
             algo.read(data)
@@ -26,7 +24,7 @@ def read_todo(tasks):
         case 3:
             algo.sort_value_low_to_high(data)
         case 4:
-            algo.sort_key(data)
+            algo.sort_key(data)       
 
 def write():
     ToBeAdded = {}
