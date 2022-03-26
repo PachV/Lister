@@ -16,3 +16,8 @@ def sort_key(data):
     print('---------------\nName Score')
     for key in sorted(data.keys()):
         print("%s %s" % (key, data[key]))
+
+def sort_key_reverse(data):
+    print('---------------\nName Score')
+    for key in sorted(data.keys(), reverse=True):
+        print("%s %s" % (key, data[key]))

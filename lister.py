@@ -10,7 +10,7 @@ def read():
     with open(file, "r") as f:
         data = json.load(f)
     tasks = int(input("-----------------\n1=Print all\n2=Sort value from highest to lowest\n\
-3=Sort value from lowerst to highest\n4=Sort key from highest to lowest\n: "))
+3=Sort value from lowerst to highest\n4=Sort key from highest to lowest\n5=Sort key from lowest to highest: "))
 
     match tasks:
         case 1:
@@ -21,6 +21,8 @@ def read():
             algo.sort_value_low_to_high(data)
         case 4:
             algo.sort_key(data)       
+        case 5:
+            algo.sort_key_reverse(data)
 
 def write():
     ToBeAdded = {}
