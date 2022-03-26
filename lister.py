@@ -1,15 +1,10 @@
 ### This is a lister for anything, movies you have watched and their rating (IMDb, MyAnimeList, VNDb, etc). WIP
-
 # To do list:
 # Change the value of the value that is already added in .json
-
 # Add QT GUI and a image saving function(probably need to learn C++) 
 import json
 import read_algo as algo 
-
 file = 'list.json'
-
-
 
 def read():
     with open(file, "r") as f:
@@ -41,19 +36,16 @@ def write():
         f.seek(0)
         json.dump(data, f)
 
-def task(choice):
-    match choice:
-      case 1:
-          write()
-      case 2:
-          read()
-
 try:
     while True:
         print("1 = Write\n2 = Read (q to quit): ", end="")
         what = input('')
         if what == 'q':
             break
-        task(int(what))
+        match int(what):
+            case 1:
+                write()
+            case 2:
+                read()
 except KeyboardInterrupt:
     print("🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥")
