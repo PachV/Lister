@@ -31,7 +31,7 @@ def write():
     key = input("Enter the Name: ")
     value = float(input("Enter the Rating: "))
     if value >=10:
-        print("try again🎱")
+        print("below 10 please 🔧🎱")
         write()
     ToBeAdded[key] = [value]
     with open(file, "r+") as f:
