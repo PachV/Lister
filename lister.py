@@ -9,10 +9,11 @@ import read_algo as algo
 
 file = 'list.json'
 
-with open(file, "r") as f:
-    data = json.load(f)
+
 
 def read():
+    with open(file, "r") as f:
+        data = json.load(f)
     tasks = int(input("-----------------\n1=Print all\n2=Sort value from highest to lowest\n\
 3=Sort value from lowerst to highest\n4=Sort key from highest to lowest\n: "))
 
