@@ -2,8 +2,16 @@
 # To do list:
 # Change the value of the value that is already added in .json
 # Add QT GUI and a image saving function(probably need to learn C++) 
+# Add to watch list-
+#  watch list will be in another file (json) as a list[] datatype, if the user write the key to the list.json that is
+#  already in the to watch list file, the it will delete that lists index.
+ 
+
+
+
 import json
-import read_algo as algo 
+import read_algo as readalgo
+import write_algo as writealgo
 file = 'list.json'
 
 def read():
@@ -14,29 +22,37 @@ def read():
 
     match tasks:
         case 1:
-            algo.read(data)
+            readalgo.read(data)
         case 2: 
-            algo.sort_value_high_to_low(data)
+            readalgo.sort_value_high_to_low(data)
         case 3:
-            algo.sort_value_low_to_high(data)
+            readalgo.sort_value_low_to_high(data)
         case 4:
-            algo.sort_key(data)       
+            readalgo.sort_key(data)       
         case 5:
-            algo.sort_key_reverse(data)
+            readalgo.sort_key_reverse(data)
 
 def write():
-    ToBeAdded = {}
-    key = input("Enter the Name: ")
-    value = float(input("Enter the Rating: "))
-    if value >=10:
-        print("below 10 please  🔧🎱")
-        write()
-    ToBeAdded[key] = [value]
-    with open(file, "r+") as f:
-        data = json.load(f)
-        data.update(ToBeAdded)
-        f.seek(0)
-        json.dump(data, f)
+    tasks = int(input("1=Write\n2=To watch list: "))
+
+    match tasks:
+        case 1:
+            ToBeAdded = {}
+            key = input("Enter the Name: ")
+            value = float(input("Enter the Rating: "))
+            if value >=10:
+                print("below 10 please  🔧🎱")
+                write()
+            ToBeAdded[key] = [value]
+            with open(file, "r+") as f:
+                data = json.load(f)
+                data.update(ToBeAdded)
+                f.seek(0)
+                json.dump(data, f)
+        case 2: 
+            pass
+
+
 
 try:
     while True:
