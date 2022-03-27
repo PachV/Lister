@@ -1,4 +1,4 @@
-### This is a lister movies ( or databses like IMDb, MyAnimeList, VNDB, etc)you have watched and their rating . WIP
+### This is a lister for movies (or databses like IMDb, MyAnimeList, VNDB, etc) you have watched and their rating . WIP
 # To do list:
     # Change the value of the key that is already added in .json
     # Add QT GUI and a image saving function(probably need to learn C++) 
@@ -48,15 +48,15 @@ def write():
                 json.dump(data, f, indent=2)
         case 2:
             what_to_watch = input("What do you want plan to watch?: ")
-            a_list = []
-            with open('plan-to-watch-list.json', "a+") as f:
+            with open("plan-to-watch-list.json", "r") as file:
+                data = json.load(file)
+            with open("plan-to-watch-list.json", "w+") as f:
+                data.append(what_to_watch)
+                json.dump(data, f)
 
 
 
 
-
-
-                json.dump(a_list, f)
 
 try:
     while True:
