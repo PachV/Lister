@@ -22,4 +22,5 @@ def plan_watch():
     with open("plan-to-watch-list.json", "w+") as f:
         data.append(what_to_watch)
         json.dump(data, f, indent=2)
-        
+
+
