@@ -14,8 +14,8 @@ file = 'list.json'
 def read():
     with open(file, "r") as f:
         data = json.load(f)
-    tasks = int(input("--------------------------\n1=Print all\n2=Sort value from highest to lowest\n\
-3=Sort value from lowerst to highest\n4=Sort key from highest to lowest\n5=Sort key from lowest to highest: "))
+    tasks = int(input("--------------------------\n1 = Print all\n2 = Sort value from highest to lowest\n\
+3 = Sort value from lowerst to highest\n4 = Sort key from highest to lowest\n5 = Sort key from lowest to highest\n6 = Print to watch list: "))
 
     match tasks:
         case 1:
@@ -28,35 +28,17 @@ def read():
             readalgo.sort_key(data)       
         case 5:
             readalgo.sort_key_reverse(data)
+        case 6:
+            readalgo.read_plan() 
 
 def write():
-    tasks = int(input("--------------------------\n1=Write\n2=To plan-to watch list: "))
+    tasks = int(input("--------------------------\n1 = Write to watched\n2 = To plan-to watch list: "))
 
     match tasks:
         case 1:
-            ToBeAdded = {}
-            key = input("Enter the Name: ")
-            value = float(input("Enter the Rating: "))
-            if value >=10:
-                print("Below 10 please  🔧🎱")
-                write()
-            ToBeAdded[key] = [value]
-            with open(file, "r+") as f:
-                data = json.load(f)
-                data.update(ToBeAdded)
-                f.seek(0)
-                json.dump(data, f, indent=2)
+            writealgo.write_file('list.json')
         case 2:
-            what_to_watch = input("What do you want plan to watch?: ")
-            with open("plan-to-watch-list.json", "r") as file:
-                data = json.load(file)
-            with open("plan-to-watch-list.json", "w+") as f:
-                data.append(what_to_watch)
-                json.dump(data, f)
-
-
-
-
+            writealgo.plan_watch('list.json')
 
 try:
     while True:

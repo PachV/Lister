@@ -1,4 +1,5 @@
 # reading algorithm
+import json
 
 def read(data):
     print('--------------------------\nName Score')
@@ -24,4 +25,13 @@ def sort_key_reverse(data):
     print('--------------------------\nName Score')
     for key in sorted(data.keys(), reverse=True):
         print("%s %s" % (key, data[key]))
+
+def read_plan():
+    with open("plan-to-watch-list.json", "r") as file:
+        data = json.load(file)
+    print('--------------------------\nTo-watch list')
+    for i in data:
+        print(i)
+
+
         
