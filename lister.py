@@ -2,13 +2,10 @@
 # To do list:
 # Change the value of the value that is already added in .json
 # Add QT GUI and a image saving function(probably need to learn C++) 
-# Add to watch list-
-#  watch list will be in another file (json) as a list[] datatype, if the user write the key to the list.json that is
-#  already in the to watch list file, the it will delete that lists index.
+# Add plan-to watch list-
+#  plan-to watch list will be in another file (json) as a list[] datatype, if the user writes the key to the list.json that is
+#  already in the to plan-to watch list file, the list file's index (name) will be deleted  
  
-
-
-
 import json
 import read_algo as readalgo
 import write_algo as writealgo
@@ -17,7 +14,7 @@ file = 'list.json'
 def read():
     with open(file, "r") as f:
         data = json.load(f)
-    tasks = int(input("-----------------\n1=Print all\n2=Sort value from highest to lowest\n\
+    tasks = int(input("--------------------------\\n1=Print all\n2=Sort value from highest to lowest\n\
 3=Sort value from lowerst to highest\n4=Sort key from highest to lowest\n5=Sort key from lowest to highest: "))
 
     match tasks:
@@ -33,7 +30,7 @@ def read():
             readalgo.sort_key_reverse(data)
 
 def write():
-    tasks = int(input("1=Write\n2=To watch list: "))
+    tasks = int(input("--------------------------\n1=Write\n2=To plan-to watch list: "))
 
     match tasks:
         case 1:
@@ -49,9 +46,13 @@ def write():
                 data.update(ToBeAdded)
                 f.seek(0)
                 json.dump(data, f)
-        case 2: 
-            pass
-
+        case 2:
+            what_to_watch = input("What do you want plan to watch?: ")
+            a_list = []
+            with open('plan-to-watch-list.json', "a+") as f:
+                data = json.load(f)
+                data.a_list.append(what_to_watch)
+                json.dump(a_list, f)
 
 
 try:
