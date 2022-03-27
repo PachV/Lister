@@ -42,8 +42,7 @@ def write():
 
 try:
     while True:
-        print("1 = Write\n2 = Read (q to quit): ", end="")
-        what = input('')
+        what = input("1 = Write\n2 = Read (q to quit): ")
         if what == 'q':
             break
         match int(what):
