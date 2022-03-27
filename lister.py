@@ -1,10 +1,10 @@
-### This is a lister for anything, movies you have watched and their rating (IMDb, MyAnimeList, VNDb, etc). WIP
+### This is a lister movies ( or databses like IMDb, MyAnimeList, VNDB, etc)you have watched and their rating . WIP
 # To do list:
-# Change the value of the value that is already added in .json
-# Add QT GUI and a image saving function(probably need to learn C++) 
-# Add plan-to watch list-
-#  plan-to watch list will be in another file (json) as a list[] datatype, if the user writes the key to the list.json that is
-#  already in the to plan-to watch list file, the list file's index (name) will be deleted  
+    # Change the value of the key that is already added in .json
+    # Add QT GUI and a image saving function(probably need to learn C++) 
+    # Add plan-to watch list-
+    #  plan-to watch list will be in another file (json) as a list datatype, if the user writes the key to the list.json that is
+    #  already in the to plan-to watch list file, the list file's index (name) will be deleted  
  
 import json
 import read_algo as readalgo
@@ -14,7 +14,7 @@ file = 'list.json'
 def read():
     with open(file, "r") as f:
         data = json.load(f)
-    tasks = int(input("--------------------------\\n1=Print all\n2=Sort value from highest to lowest\n\
+    tasks = int(input("--------------------------\n1=Print all\n2=Sort value from highest to lowest\n\
 3=Sort value from lowerst to highest\n4=Sort key from highest to lowest\n5=Sort key from lowest to highest: "))
 
     match tasks:
@@ -38,22 +38,25 @@ def write():
             key = input("Enter the Name: ")
             value = float(input("Enter the Rating: "))
             if value >=10:
-                print("below 10 please  🔧🎱")
+                print("Below 10 please  🔧🎱")
                 write()
             ToBeAdded[key] = [value]
             with open(file, "r+") as f:
                 data = json.load(f)
                 data.update(ToBeAdded)
                 f.seek(0)
-                json.dump(data, f)
+                json.dump(data, f, indent=2)
         case 2:
             what_to_watch = input("What do you want plan to watch?: ")
             a_list = []
             with open('plan-to-watch-list.json', "a+") as f:
-                data = json.load(f)
-                data.a_list.append(what_to_watch)
-                json.dump(a_list, f)
 
+
+
+
+
+
+                json.dump(a_list, f)
 
 try:
     while True:

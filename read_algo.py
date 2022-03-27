@@ -1,6 +1,7 @@
 # reading algorithm
 
 def read(data):
+    print('--------------------------\nName Score')
     for key, value in data.items():
         print("%s %s" % (key, value))
 
