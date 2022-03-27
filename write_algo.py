@@ -1,7 +1,6 @@
 # writing algorithm 
 import json
 
-
 def write_file(file):
     ToBeAdded = {}
     key = input("Enter the Name: ")
@@ -16,7 +15,7 @@ def write_file(file):
         f.seek(0)
         json.dump(data, f, indent=2)
 
-def plan_watch(file):
+def plan_watch():
     what_to_watch = input("What do you want plan to watch?: ")
     with open("plan-to-watch-list.json", "r") as file:
         data = json.load(file)

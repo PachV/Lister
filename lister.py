@@ -36,9 +36,9 @@ def write():
 
     match tasks:
         case 1:
-            writealgo.write_file('list.json')
+            writealgo.write_file(file)
         case 2:
-            writealgo.plan_watch('list.json')
+            writealgo.plan_watch()
 
 try:
     while True:
