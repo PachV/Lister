@@ -1,15 +1,26 @@
 # writing algorithm 
 import json
 
-def write_file(file):
+def write_file():
     ToBeAdded = {}
     key = input("Enter the Name: ")
     value = float(input("Enter the Rating: "))
     if value >=10:
-        print("Below 10 please  🔧🎱")
-        write_file(file)
+        print("Under 10 please 🔧")
+        write_file()
     ToBeAdded[key] = [value]
-    with open(file, "r+") as f:
+
+    # #If ToBeAdded key matches with the string in plan-to-watch-list.json, it will be deleted
+    # with open("plan-to-watch-list.json", "r") as file:
+    #     data = json.load(file)
+    # with open("plan-to-watch-list.json", "r+") as fi:
+    #     for i in data:
+    #         if i in ToBeAdded.keys():
+    #             data = data.remove(i)
+    #             json.dump(data, fi)
+
+
+    with open("watched_list.json", "r+") as f:
         data = json.load(f)
         data.update(ToBeAdded)
         f.seek(0)
