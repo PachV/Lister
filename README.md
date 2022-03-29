@@ -9,8 +9,8 @@ The program includes the follow feature:
 * Sort alphabetically by name, and highest/lowest rating.
 * Warns user if the rating is above 10.
 
-# To do:
-* QT or pyQT GUI
+# To do
+* QT or pyQT GUI (if I want to learn it xd)
 
 # Inspiration 
 I wanted a listing program that doesn't require the internet to track what I have been listing online, everything is saved locally.
