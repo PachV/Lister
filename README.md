@@ -5,7 +5,7 @@ lister.py is the main
 # Introduction
 This program will help you list your movie ratings
 The program includes the follow feature:
-* Automatically removes the plan to watch list name if you write into watched list.
+* Automatically removes the plan to watch list name if you write the same name into watched list.
 * Sort alphabetically by name, and highest/lowest rating.
 * Warns user if the rating is above 10.
 
