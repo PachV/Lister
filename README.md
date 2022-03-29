@@ -3,7 +3,6 @@ Make sure you are using python3.10 or up, or else pattern switching would not wo
 lister.py is the main
 
 # To do:
-* If the key that is going to be added, check in plan-to-watch-list.json and remove the string.
 * QT or pyQT GUI
 
 # Inspiration 
