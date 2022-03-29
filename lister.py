@@ -1,6 +1,5 @@
 ### This is a lister for movies(or databses like IMDb, MyAnimeList, VNDB, etc) you have watched and their rating. WIP
 # To do list:
-    # Change the value of the key that is already added in .json
     # Add QT GUI and a image saving/scraping function(probably need to learn C++) 
     # Add plan-to watch list-
     #  plan-to watch list will be in another file (json) as a list datatype, if the user writes the key to the list.json that is
