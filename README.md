@@ -9,3 +9,6 @@ lister.py is the main
 I wanted a listing program that doesn't require the internet to track what I have been listing online, everything is saved locally.
 
 I also wanted to work with data and files in python since it is easier than C.
+
+# Disclaimer
+I am still learning git, you will see some weird changes
