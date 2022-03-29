@@ -2,6 +2,13 @@ Make sure you are using python3.10 or up, or else pattern switching would not wo
 
 lister.py is the main
 
+# Introduction
+This program will help you list your movie ratings
+The program includes the follow feature:
+* Automatically removes the plan to watch list name if you write into watched list.
+* Sort alphabetically by name, and highest/lowest rating
+* Warns user if the rating is above 10
+
 # To do:
 * QT or pyQT GUI
 
@@ -12,3 +19,4 @@ I also wanted to work with data and files in python since it is easier than C.
 
 # Disclaimer
 I am still learning git, you will see some weird changes
+Sorry if I program weirdly that cause you to commit sudoku (not sorry)
