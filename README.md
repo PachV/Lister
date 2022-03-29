@@ -20,4 +20,4 @@ I also wanted to work with data and files in python since it is easier than C.
 # Disclaimer
 I am still learning git, you will see some weird changes.
 
-Sorry if I program weirdly that cause you to commit sudoku (not sorry).
+Sorry if my synax cause you to commit sudoku (not sorry).
