@@ -9,6 +9,7 @@ import json
 import read_algo as readalgo
 import write_algo as writealgo
 
+# test
 def read():
     with open("watched_list.json", "r") as f:
         data = json.load(f)
