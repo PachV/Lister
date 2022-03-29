@@ -10,14 +10,14 @@ def write_file():
         write_file()
     ToBeAdded[key] = [value]
 
-    # #If ToBeAdded key matches with the string in plan-to-watch-list.json, it will be deleted
-    # with open("plan-to-watch-list.json", "r") as file:
-    #     data = json.load(file)
-    # with open("plan-to-watch-list.json", "r+") as fi:
-    #     for i in data:
-    #         if i in ToBeAdded.keys():
-    #             data = data.remove(i)
-    #             json.dump(data, fi)
+    #If ToBeAdded key matches with the string in plan-to-watch-list.json, it will be deleted
+    with open("plan-to-watch-list.json", "r") as file:
+        data = json.load(file)
+    with open("plan-to-watch-list.json", "w+") as fi:
+        for i in data:
+            if i in ToBeAdded.keys():
+                data.remove(i)
+                json.dump(data, fi)
 
 
     with open("watched_list.json", "r+") as f:
